@@ -2,6 +2,10 @@
 
 <img src="/images/architec.png" width="800px" align="center">
 
+## Team TaipeiQC 
+Member : [Chen-Yu Liu](https://cylphysics.github.io/about/), Ya-Chi Lu
+
+
 ## Project description 
 Presentation file can be found [here](RL_QLS_presentation.pdf).  
 [Quantum Local Search](https://doi.org/10.1002/qute.201900029) utilizes small quantum computers to solve large combinatorial optimization problems by performing local search on quantum hardware, given an initial start point. However, the random selection process of the sub-problem to solve may not be efficient. In this hackathon project, we aim to train a reinforcement learning (RL) agent to find a better strategy for choosing the subproblem to solve in the quantum local search scenario, rather than relying on random selection.
