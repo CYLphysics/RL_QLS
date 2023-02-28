@@ -2,6 +2,7 @@
 
 <img src="/images/architec.png" width="800px" align="center">
 
+## Project description 
 [Quantum Local Search](https://doi.org/10.1002/qute.201900029) utilizes small quantum computers to solve large combinatorial optimization problems by performing local search on quantum hardware, given an initial start point. However, the random selection process of the sub-problem to solve may not be efficient. In this hackathon project, we aim to train a reinforcement learning (RL) agent to find a better strategy for choosing the subproblem to solve in the quantum local search scenario, rather than relying on random selection.
 
 In this repository, we provide the source code for implementing Reinforcement Learning Quantum Local Search (RL-QLS). First, to train an RL agent, an environment for the agent is required. The folder `gym_example/envs/` contains a file named `lssa_env.py`, which describes the gym environment of a QLS task. The file includes the basic elements for an environment, such as `__init__()`, `reset()` and `step()`. These elements enable the agent to explore and search for better strategies in the game (i.e., the choice of sub-problem). Here, "better" refers to a higher reward value obtained by the agent. The reward value is set as the approximation ratio of the solution configuration.
@@ -15,3 +16,11 @@ In the `RL_LSSA_plot.ipynb` notebook, the mean episode reward during the trainin
 <img src="/images/reward.png" width="800px" align="center">
 <img src="/images/Approx.png" width="800px" align="center">
 
+## Future work 
+
+* ### Increase the subsystem size to be solved  
+    For now, the subsystem size is 5, which could be scaled up in the future, with possible improvement of RL-QLS process, since the RL agent handles larger sub-problem at a time. 
+* ### Applicability of specific problem  
+    Can we train on fully-connected random graph and apply the RL agent to the regular-￼ graph combinatorial optimization problems ? or addition training is required ?
+* ### Transferability of different models  
+    For now, each problem size and sub-problem size requires different RL model, can these models share some common “knowledge” and reduce the required training time ? 
